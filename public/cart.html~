@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="angular.min.js"></script>
+    <script type="text/javascript" src="angular-route.min.js"></script>
+    <script type="text/javascript" src="index.js"></script>
+</head>
+
+<body>
+    <h1>Your shopping cart</h1>
+    <div ng-app="myShoppingApp" ng-controller="myCtrl">
+        <ul>
+            <li ng-repeat="x in products"> <a href="/#!/{{x}}">{{x}}</a>
+                <span ng-click="removeItem($index)" style="cursor: pointer"> &times;</span>
+            </li>
+        </ul>
+        <input ng-model="addMe" ng-keypress="($event.which == 13)?addItem():0">
+        <button ng-click="addItem()">Add</button>
+        <p style="color:red">{{errortext}}</p>
+        <div ng-view></div>
+    </div>
+    <a href="/index.html">back</a>
+
+</body>
+
+</html>

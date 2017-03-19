@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html ng-app="fullStackApp">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script type="text/javascript" src="./scripts/angular.min.js"></script>
+  <script type="text/javascript" src="./scripts/angular-route.min.js"></script>
+  <script type="text/javascript" src="./index.js"></script>
+  <script type="text/javascript" src="./services/authentication.service.js"></script>
+  <script type="text/javascript" src="./services/data.service.js"></script>
+  <script type="text/javascript" src="./auth/login/login.controller.js"></script>
+  <script type="text/javascript" src="./auth/register/register.controller.js"></script>
+  <script type="text/javascript" src="./profile/profile.controller.js"></script>
+
+  <title>Woolies</title>
+  <base href="/">
+</head>
+
+<body ng-view>
+  <h1>Welcome to Woolies Online Shopping Catalogue.</h1>
+  <h2>Check out our specials.</h2>
+  <a href="/about">Main</a>
+  <a href="/cart">Shopping cart</a>
+  <a href="/login">Login</a>
+</body>
+
+</html>
